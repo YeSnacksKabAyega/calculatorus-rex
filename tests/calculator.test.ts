@@ -55,7 +55,7 @@ describe ('String calculator', () =>    {
     test ('Throw exception if negative numbers are found', () =>   {
 
         let input= '//;\n90;09\n-9,-99'
-        let output= add(input)
+        let output= ()=> add(input)
 
         expect (output).toThrow('Negatives not allowed: -9, -99')
     })

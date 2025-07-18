@@ -25,3 +25,7 @@ Output: 21
 Example #6:
 Input: '//;\n90;09'
 Output: 99
+
+Example #7:
+Input: '//;\n90;09\n-9,-99'
+Output: Exception. Use positive numbers only.

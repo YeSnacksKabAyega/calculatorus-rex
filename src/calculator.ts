@@ -18,7 +18,10 @@ export function add(numbers: string): number {
     let regexOfDelimiters= new RegExp((delimiters.map(delimiter=> delimiter.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'))).join('|'))
 
     let sum: number= 0
-    numbers.split(regexOfDelimiters).forEach((num: string)=>  sum+= parseInt(num))
+    let exceptions: string[]= []
+    numbers.split(regexOfDelimiters).forEach((num: string)=>  parseInt(num)>= 0 ? sum+= parseInt(num) : exceptions.push(num))
+    if (exceptions.length> 0)
+        throw new Error('Negatives not allowed: '+ exceptions.join(', '))
     
     return sum
 }
