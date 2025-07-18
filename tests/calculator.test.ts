@@ -76,12 +76,20 @@ describe ('String calculator', () =>    {
         expect (output).toBe(4+ 4)
     })
 
-    test ('All tests', () =>    {
+    test ('Support multiple delimiters', () =>   {
 
-        let input= '//[***]\n9009\n9***99,999'
+        let input= '//[;][%]\n6%7;8'
         let output= add(input)
 
-        expect (output).toBe(9+ 99+ 999)
+        expect (output).toBe(6+ 7+ 8)
+    })
+
+    test ('All tests', () =>    {
+
+        let input= '//[%][;]\n9009\n9%99,999;9'
+        let output= add(input)
+
+        expect (output).toBe(9+ 99+ 999+ 9)
     })
 
 })
