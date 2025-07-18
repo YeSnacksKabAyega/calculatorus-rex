@@ -29,11 +29,19 @@ describe ('String calculator', () =>    {
     })
 
     test ('Add more than two numbers', () =>   {
-        
+
         let input= '6,9,4'
         let output= add(input)
 
         expect (output).toBe(6+ 9+ 4)
+    })
+
+    test ('Handle new lines (\n) as delimiters', () =>   {
+        
+        let input= '6,9\n4,2'
+        let output= add(input)
+
+        expect (output).toBe(6+ 9+ 4+ 2)
     })
 
 })
