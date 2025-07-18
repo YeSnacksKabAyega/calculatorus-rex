@@ -52,4 +52,12 @@ describe ('String calculator', () =>    {
         expect (output).toBe(90+ 9)
     })
 
+    test ('Throw exception if negative numbers are found', () =>   {
+
+        let input= '//;\n90;09\n-9,-99'
+        let output= add(input)
+
+        expect (output).toThrow('Negatives not allowed: -9, -99')
+    })
+
 })
