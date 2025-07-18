@@ -11,7 +11,11 @@ export function add(numbers: string): number {
     let delimiters: string[]= [',', '\n']
     // Check for custom delimiters
     if (numbers.startsWith('//'))   {
-        delimiters.push(numbers.substring(2, numbers.indexOf('\n')))
+        let delimiter= numbers.substring(2, numbers.indexOf('\n'))
+        if (delimiter.startsWith('[') && delimiter.endsWith(']'))
+            delimiters.push(delimiter.substring(1, delimiter.length- 1))
+        else
+            delimiters.push(delimiter)
         numbers= numbers.substring(numbers.indexOf('\n')+ 1)
     }
     // Build Regex pattern for all delimiters

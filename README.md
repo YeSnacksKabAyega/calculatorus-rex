@@ -33,3 +33,7 @@ Output: Exception. Use positive numbers only.
 Example #8:
 Input: '//;\n9009\n9,99'
 Output: 108
+
+Example #9: 
+Input: '//[***]\n4***0***4'
+Output: 8
