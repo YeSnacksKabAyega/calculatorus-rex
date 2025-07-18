@@ -3,6 +3,9 @@ export function add(numbers: string): number {
     // Return 0 for empty input
     if (numbers.length== 0)
         return 0
+    if (numbers.length== 1) 
+        if (!isNaN(parseInt(numbers)))
+            return parseInt(numbers)
 
     return -1
 }

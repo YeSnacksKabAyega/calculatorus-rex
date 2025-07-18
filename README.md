@@ -5,3 +5,7 @@ This is a string based calculator. The whole operation must be in a single strin
 Example #1: 
 Input: ""
 Output: 0
+
+Example #2:
+Input: "6"
+Output: 6
