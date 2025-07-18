@@ -68,9 +68,17 @@ describe ('String calculator', () =>    {
         expect (output).toBe(9+ 99)
     })
 
+    test ('Support delimiters of any length', () =>   {
+
+        let input= '//[***]\n4***0***4'
+        let output= add(input)
+
+        expect (output).toBe(4+ 4)
+    })
+
     test ('All tests', () =>    {
 
-        let input= '//;\n9009\n9;99\n999'
+        let input= '//[***]\n9009\n9***99,999'
         let output= add(input)
 
         expect (output).toBe(9+ 99+ 999)
