@@ -22,4 +22,10 @@ describe ('String calculator', () =>    {
         expect (output).toBe(6+ 9)
     })
 
+    test ('Add more than two numbers', () =>   {
+        let input= '6,9,4'
+        let output= add(input)
+        expect (output).toBe(6+ 9+ 4)
+    })
+
 })
