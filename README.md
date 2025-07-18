@@ -40,3 +40,8 @@ Output: 8
 
 Example #10:
 Input: '//[%][*]\n86%42*88
+Output: 216
+
+Example #11: 
+Input: '//[;;;][%%]\n6%%7;;;8'
+Output: 21
