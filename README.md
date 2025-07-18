@@ -37,3 +37,6 @@ Output: 108
 Example #9: 
 Input: '//[***]\n4***0***4'
 Output: 8
+
+Example #10:
+Input: '//[%][*]\n86%42*88

@@ -12,8 +12,10 @@ export function add(numbers: string): number {
     // Check for custom delimiters
     if (numbers.startsWith('//'))   {
         let delimiter= numbers.substring(2, numbers.indexOf('\n'))
-        if (delimiter.startsWith('[') && delimiter.endsWith(']'))
-            delimiters.push(delimiter.substring(1, delimiter.length- 1))
+        if (delimiter.startsWith('[') && delimiter.endsWith(']'))   {
+            let delimits= delimiter.match(/\[([^\]]+)\]/g)
+            delimits?.forEach((delimit: string)=>   delimiters.push(delimit.slice(1, -1)))
+        }
         else
             delimiters.push(delimiter)
         numbers= numbers.substring(numbers.indexOf('\n')+ 1)
