@@ -1,3 +1,7 @@
 Hi. Welcome to Calculatorus-Rex 🦖.
 
-This is an initial setup. Fasten your seatbelts, there's a calculator coming up.
+This is a string based calculator. The whole operation must be in a single string format as shown in the following examples. You may also refer to the test file which shows the tests step by step, so it's like a running documentation.
+
+Example #1: 
+Input: ""
+Output: 0
