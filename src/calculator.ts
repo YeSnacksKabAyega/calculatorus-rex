@@ -8,8 +8,17 @@ export function add(numbers: string): number {
     if (numbers.split(/[\n,]/).length== 1) 
         return parseInt(numbers)
     
+    let delimiters: string[]= [',', '\n']
+    // Check for custom delimiters
+    if (numbers.startsWith('//'))   {
+        delimiters.push(numbers.substring(2, numbers.indexOf('\n')))
+        numbers= numbers.substring(numbers.indexOf('\n')+ 1)
+    }
+    // Build Regex pattern for all delimiters
+    let regexOfDelimiters= new RegExp((delimiters.map(delimiter=> delimiter.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'))).join('|'))
+
     let sum: number= 0
-    numbers.split(/[\n,]/).forEach((num: string)=>  sum+= parseInt(num))
+    numbers.split(regexOfDelimiters).forEach((num: string)=>  sum+= parseInt(num))
     
     return sum
 }

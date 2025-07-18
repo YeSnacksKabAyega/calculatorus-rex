@@ -21,3 +21,7 @@ Output: 19
 Example #5:
 Input: '6,9\n4,2'
 Output: 21
+
+Example #6:
+Input: '//;\n90;09'
+Output: 99
