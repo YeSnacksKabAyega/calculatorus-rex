@@ -21,7 +21,13 @@ export function add(numbers: string): number {
     let exceptions: string[]= []
     numbers.split(regexOfDelimiters).forEach((num: string)=>  {
         let parsedNum= parseInt(num)
-        parsedNum>= 0 ? parsedNum> 1000 ? null : sum+= parsedNum : exceptions.push(num)
+        parsedNum>= 0 ? 
+            parsedNum> 1000 ? 
+                null 
+                : 
+                sum+= parsedNum 
+            :
+            exceptions.push(num)
     })
     if (exceptions.length> 0)
         throw new Error('Negatives not allowed: '+ exceptions.join(', '))
