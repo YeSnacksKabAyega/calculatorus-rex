@@ -29,3 +29,7 @@ Output: 99
 Example #7:
 Input: '//;\n90;09\n-9,-99'
 Output: Exception. Use positive numbers only.
+
+Example #8:
+Input: '//;\n9009\n9,99'
+Output: 108

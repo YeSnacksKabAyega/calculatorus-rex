@@ -68,4 +68,12 @@ describe ('String calculator', () =>    {
         expect (output).toBe(9+ 99)
     })
 
+    test ('All tests', () =>    {
+
+        let input= '//;\n9009\n9;99\n999'
+        let output= add(input)
+
+        expect (output).toBe(9+ 99+ 999)
+    })
+
 })
