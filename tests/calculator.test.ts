@@ -15,4 +15,11 @@ describe ('String calculator', () =>    {
         let output= add(input)
         expect (output).toBe(parseInt(input))
     })
+
+    test ('Add two numbers', () =>   {
+        let input= '6,9'
+        let output= add(input)
+        expect (output).toBe(6+ 9)
+    })
+
 })

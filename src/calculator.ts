@@ -6,6 +6,10 @@ export function add(numbers: string): number {
     if (numbers.length== 1) 
         if (!isNaN(parseInt(numbers)))
             return parseInt(numbers)
+    
+    let sum: number= 0
+    let numbersList= numbers.split(',')
+    sum= parseInt(numbersList[0])+ parseInt(numbersList[1])
 
-    return -1
+    return sum
 }
