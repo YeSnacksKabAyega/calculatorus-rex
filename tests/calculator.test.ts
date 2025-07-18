@@ -60,4 +60,12 @@ describe ('String calculator', () =>    {
         expect (output).toThrow('Negatives not allowed: -9, -99')
     })
 
+    test ('Ignore numbers> 1000', () =>   {
+
+        let input= '//;\n9009\n9,99'
+        let output= add(input)
+
+        expect (output).toBe(9+ 99)
+    })
+
 })
