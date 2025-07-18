@@ -44,4 +44,12 @@ describe ('String calculator', () =>    {
         expect (output).toBe(6+ 9+ 4+ 2)
     })
 
+    test ('Support different delimiters', () =>   {
+
+        let input= '//;\n90;09'
+        let output= add(input)
+
+        expect (output).toBe(90+ 9)
+    })
+
 })
