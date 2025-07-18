@@ -13,3 +13,7 @@ Output: 6
 Example #3:
 Input: '6,9'
 Output: 15
+
+Example #4:
+Input: '6, 9, 4'
+Output: 19

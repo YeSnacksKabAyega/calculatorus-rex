@@ -8,8 +8,7 @@ export function add(numbers: string): number {
             return parseInt(numbers)
     
     let sum: number= 0
-    let numbersList= numbers.split(',')
-    sum= parseInt(numbersList[0])+ parseInt(numbersList[1])
-
+    numbers.split(',').forEach((num: string)=>  sum+= parseInt(num))
+    
     return sum
 }
