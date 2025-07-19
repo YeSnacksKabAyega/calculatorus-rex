@@ -1,6 +1,7 @@
 Hi. Welcome to Calculatorus-Rex 🦖.
 
-This is a string based calculator. The whole operation must be in a single string format as shown in the following examples. You may also refer to the test file which shows the tests step by step, so it's like a running documentation.
+Run the app: npx ts-node <path>start.ts
+This is a string based calculator project built as an example of TDD. Enter a string, and see the sum of all numbers as long as they follow the required format. The whole operation must be in a single string format as shown in the following examples. You may also refer to the test file which shows the tests step by step, so it's like a running documentation.
 
 Example #1: 
 Input: ''

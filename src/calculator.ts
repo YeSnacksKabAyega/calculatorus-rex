@@ -1,14 +1,6 @@
 export function add(numbers: string): number {
-    
-    // Return 0 for empty input
-    if (numbers.length== 0)
-        return 0
 
-    // Return the number for a single number
-    if (numbers.split(/[\n,]/).length== 1) 
-        return parseInt(numbers)
-    
-    let delimiters: string[]= [',', '\n']
+    let delimiters: string[]= [',', '\n']   // Default delimiters
     // Check for custom delimiters
     if (numbers.startsWith('//'))   {
         let delimiter= numbers.substring(2, numbers.indexOf('\n'))
@@ -27,13 +19,13 @@ export function add(numbers: string): number {
     let exceptions: string[]= []
     numbers.split(regexOfDelimiters).forEach((num: string)=>  {
         let parsedNum= parseInt(num)
-        parsedNum>= 0 ? 
-            parsedNum> 1000 ? 
-                null 
-                : 
+        parsedNum> 0 && parsedNum< 1001 ? 
                 sum+= parsedNum 
             :
-            exceptions.push(num)
+            Number.isInteger(parsedNum) && parsedNum< 0 ?
+                exceptions.push(num)
+                :
+                null
     })
     if (exceptions.length> 0)
         throw new Error('Negatives not allowed: '+ exceptions.join(', '))
